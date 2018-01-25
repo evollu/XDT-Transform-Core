@@ -15,7 +15,7 @@
     "Minor": 0,
     "Patch": 0
   },
-  "instanceNameFormat": "XDT Transform $(message)",
+  "instanceNameFormat": "Apply transforms $(transforms)",
   "inputs": [
     {
       "name": "workingFolder",
