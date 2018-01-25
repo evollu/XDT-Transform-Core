@@ -8,6 +8,7 @@ task.setResourcePath(path.join(__dirname, 'task.json'));
 
 var input = task.getInput('transforms', true);
 var workingFolder = task.getInput('workingFolder') || task.cwd();
+var dllPath = path.join(__dirname, 'dotnet-transform-xdt.dll');
 
 var lines = input.split(/\s*\r?\n\s*/);
 for(var i=0; i<lines.length; i++){
@@ -18,7 +19,7 @@ for(var i=0; i<lines.length; i++){
     var xml = path.join(workingFolder, items[1]);
     var xdt = path.join(workingFolder, items[0]);
     var output = items.length >=3 ? path.join(workingFolder, items[2]) : xml;
-    exec("dotnet dotnet-transform-xdt.dll -x " + xml + " -o " + output + " -t " + xdt, function (err, stdout, stderr) {
+    exec("dotnet " + dllPath + " -x " + xml + " -o " + output + " -t " + xdt, function (err, stdout, stderr) {
         if (err) {
             throw new Error(err);
             return;
