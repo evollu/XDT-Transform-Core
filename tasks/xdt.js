@@ -9,8 +9,11 @@ task.setResourcePath(path.join(__dirname, 'task.json'));
 var input = task.getInput('transforms', true);
 var workingFolder = task.getInput('workingFolder') || task.cwd();
 
-var lines = input.split(/\r?\n/);
+var lines = input.split(/\s*\r?\n\s*/);
 for(var i=0; i<lines.length; i++){
+    if(!lines[i]){
+        continue;
+    }
     var items = lines[i].split(/\s*=>\s*/);
     var xml = path.join(workingFolder, items[1]);
     var xdt = path.join(workingFolder, items[0]);
