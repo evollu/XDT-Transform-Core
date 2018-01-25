@@ -18,28 +18,20 @@
   "instanceNameFormat": "XDT Transform $(message)",
   "inputs": [
     {
-      "name": "xml",
+      "name": "workingFolder",
       "type": "filePath",
-      "label": "Config File",
+      "label": "Working folder",
       "defaultValue": "",
-      "required": true,
-      "helpMarkDown": "The config file to transform"
+      "required": false,
+      "helpMarkDown": "Working directory for relative paths. Defaults to the agent working directory."
     },
     {
-      "name": "xdt",
-      "type": "filePath",
-      "label": "Xdt File",
+      "name": "transforms",
+      "type": "multiLine",
+      "label": "Transformations",
       "defaultValue": "",
       "required": true,
-      "helpMarkDown": "The xdt file used in transformation"
-    },
-    {
-      "name": "output",
-      "type": "filePath",
-      "label": "Result File",
-      "defaultValue": "",
-      "required": true,
-      "helpMarkDown": "The result file to save (normally same with Config File name)"
+      "helpMarkDown": "Absolute or relative comma or newline-separated of transformation file rules.<br/>Syntax: {xdt path} => {xml path}[ => {output path}]<br/>Example: 'web.release.config => web.config' will apply web.release.config to web.config and update the file.<br/>Example: 'xdt\\web.release.config => config\\web.config => web.config' will apply xdt\\web.release.config to config\\web.config and save the result in web.config."
     }
   ],
   "execution": {
