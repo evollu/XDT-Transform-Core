@@ -1,6 +1,6 @@
 {
   "id": "f4e59359-cd05-416b-ab46-6c52b60b5594",
-  "name": "XDT Transform Core",
+  "name": "XDTTransformCore",
   "friendlyName": "Config Transformation",
   "description": "Easy and fast transform your xml based configuration files",
   "author": "Libin Lu",
@@ -10,7 +10,11 @@
     "Release"
   ],
   "demands": [],
-  "version": "0.1.0",
+  "version": {
+    "Major": 1,
+    "Minor": 0,
+    "Patch": 0
+  },
   "instanceNameFormat": "XDT Transform $(message)",
   "inputs": [
     {
