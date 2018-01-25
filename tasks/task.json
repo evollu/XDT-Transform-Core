@@ -1,7 +1,7 @@
 {
   "id": "f4e59359-cd05-416b-ab46-6c52b60b5594",
   "name": "XDTTransformCore",
-  "friendlyName": "Config Transformation",
+  "friendlyName": "XML Transform Core",
   "description": "Easy and fast transform your xml based configuration files",
   "author": "Libin Lu",
   "category": "Utility",
