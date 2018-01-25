@@ -3,7 +3,7 @@
   "id": "xdtcore",
   "version": "0.1.0",
   "name": "XDT Transform Core",
-  "publisher": "LibinLu",
+  "publisher": "evollu",
   "public": true,
   "description": "Transform xml through xdt",
   "targets": [
@@ -47,14 +47,14 @@
   ],
   "contributions": [
     {
-      "id": "configtransformsaeid-SaeidBabaei-configtransform",
+      "id": "xdtcore-evollu",
       "type": "ms.vss-distributed-task.task",
-      "description": "Config Transformation",
+      "description": "XDT Transform Core",
       "targets": [
         "ms.vss-distributed-task.tasks"
       ],
       "properties": {
-        "name": "ConfigTransform"
+        "name": "XDTTransformCore"
       }
     }
   ]
