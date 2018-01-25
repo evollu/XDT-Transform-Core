@@ -1,0 +1,61 @@
+{
+  "manifestVersion": 1,
+  "id": "xdtcore",
+  "version": "0.1.0",
+  "name": "XDT Transform Core",
+  "publisher": "LibinLu",
+  "public": true,
+  "description": "Transform xml through xdt",
+  "targets": [
+    {
+      "id": "Microsoft.VisualStudio.Services"
+    }
+  ],
+  "icons": {
+    "default": "icon.png"
+  },
+  "categories": [
+    "Build and release"
+  ],
+  "tags": [
+    "Configuration",
+    "config Transformation",
+    "Transform",
+    "XML",
+    "XDT"
+  ],
+  "content": {
+    "details": {
+      "path": "overview.md"
+    }
+  },
+  "links": {
+    "repository": {
+      "uri": "https://github.com/evollu/XDT-Transform-Core"
+    }
+  },
+  "branding": {
+    "color": "rgb(211, 27, 101)",
+    "theme": "light"
+  },
+  "scopes": [],
+  "baseUri": "https://github.com/evollu/XDT-Transform-Core",
+  "files": [
+    {
+      "path": "tasks"
+    }
+  ],
+  "contributions": [
+    {
+      "id": "configtransformsaeid-SaeidBabaei-configtransform",
+      "type": "ms.vss-distributed-task.task",
+      "description": "Config Transformation",
+      "targets": [
+        "ms.vss-distributed-task.tasks"
+      ],
+      "properties": {
+        "name": "ConfigTransform"
+      }
+    }
+  ]
+}

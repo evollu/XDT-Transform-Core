@@ -1,0 +1,47 @@
+{
+  "id": "f4e59359-cd05-416b-ab46-6c52b60b5594",
+  "name": "XDT Transform Core",
+  "friendlyName": "Config Transformation",
+  "description": "Easy and fast transform your xml based configuration files",
+  "author": "Libin Lu",
+  "category": "Utility",
+  "visibility": [
+    "Build",
+    "Release"
+  ],
+  "demands": [],
+  "version": "0.1.0",
+  "instanceNameFormat": "XDT Transform $(message)",
+  "inputs": [
+    {
+      "name": "xml",
+      "type": "filePath",
+      "label": "Config File",
+      "defaultValue": "",
+      "required": true,
+      "helpMarkDown": "The config file to transform"
+    },
+    {
+      "name": "xdt",
+      "type": "filePath",
+      "label": "Xdt File",
+      "defaultValue": "",
+      "required": true,
+      "helpMarkDown": "The xdt file used in transformation"
+    },
+    {
+      "name": "output",
+      "type": "filePath",
+      "label": "Result File",
+      "defaultValue": "",
+      "required": true,
+      "helpMarkDown": "The result file to save (normally same with Config File name)"
+    }
+  ],
+  "execution": {
+    "Node": {
+      "target": "xdt.js",
+      "argumentFormat": ""
+    }
+  }
+}
