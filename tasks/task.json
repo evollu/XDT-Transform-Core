@@ -37,7 +37,8 @@
   "execution": {
     "Node": {
       "target": "xdt.js",
-      "argumentFormat": ""
+      "argumentFormat": "",
+      "workingDirectory": "$(System.DefaultWorkingDirectory)"
     }
   }
 }
